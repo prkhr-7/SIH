@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+<style>
+#con{
+box-shadow: -8px 0px 25px #006994;
+width:600px;
+  height:1000px;background-color: white;
+  position:fixed;right:0px;padding-left: 90px;padding-right: 90px;opacity: 0.90;
+
+}
+.bo{border: 0px solid #ced4da;padding-left: 1px;
+      border-bottom: 1px solid #ced4da;border-radius: 2px;}
+</style>
+
+    <title>Register</title>
+  </head>
+  <body background="amp.jpeg"><div id="con" class="container"><br><br><br>
+    <h4 class="display-4" style="color:#525960;padding-left: 0px;font-family:"Seoge UI";">Register</h4><br><br>
+    <form action="#">
+      <div class="form-group"><form action="www.google.com">
+        <label >University Roll Number</label>
+        <input type="text" class="form-control form-control-lg bo" pattern="[0-9]{10}" maxlength="10" placeholder="Roll number">
+      </div><br>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control form-control-lg bo" aria-describedby="emailHelp" placeholder="User email-adress">
+        </div><br>
+         <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" pattern=".{6,}" class="form-control form-control-lg bo" placeholder="Password"  id="txtPassword" id="txtConfirmPassword">
+        </div><br>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Re-Password</label>
+        <input type="password" class="form-control form-control-lg bo" id="txtConfirmPassword" placeholder="Re-Password">
+      </div>
+      <br>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input">
+        <label class="form-check-label" for="exampleCheck1">Terms and Conditions</label>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg " onclick="validate()">Submit</button>
+    </form>
+    <div style="width:auto;
+      height:200px;padding-top: 60px;">
+
+
+
+      <center>
+    <a class="btn btn-primary btn-lg" href="login.html" role="button" style="background-color: #28a745;
+    border-color: #28a745;">Already Registered?</a></center><div>
+
+
+    <script src="jq.js"></script>
+    <script src="pop.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+    function validate() {
+        var password = document.getElementById("txtPassword").value;
+        var confirmPassword = document.getElementById("txtConfirmPassword").value;
+        if (password != confirmPassword) {
+
+            alert("Passwords mismatch!");
+
+        }
+
+    }
+</script>
+  </body>
+</html>
